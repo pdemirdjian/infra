@@ -1,1 +1,9 @@
 language: golang
+env:
+  global:
+    secure: jxc7ow7uF3jfcvfqCBw7oTYgwyaHjfdQyjGJygwHIin9x/C+3QNQ6IEGyk3vAKnUQRyI9/jL1nLVCBhBriiQyN+NLmB6z/fiFN+KIavP4xhSml+f+yOqNIZlY78f4is9uJiILDzkN5VuDTT7h1Sit9NLP4fQgcRIkLwUlJeiibrlGQMDMJmJ7UFoAWFqpzmp+pb70ZEstD9PxTSymxQeHb8mGQzeSsL9yhXAamDTcWZXgUPwTPqXFmqVneL2vFtnSEog5O4MpxzQ3bZEWIA/4S11Gs3Olawo6NH2bxJLl1KlkDX7Cf1LrItqU4qnHD4owCDgFfrlC5fUomgUxuw5+QyaFC+P6UeUHQs6EEYva4A1+vFLuRbYkjNzMiuGPzp5yQYgyvON9sTOJrBYgRgALVtRpS+r2r4krT9i5jjEqGOT5HLo19NU5yHVxum5sTcZOYX3iHdtB7Acj6iD4dAEVpMGO62fq4vLyhir1EP4HPdZde+Mck1BU3vnuEyOvsF8o7iyyMpE55Ox4+/c1jGA3fRVMdffzjaiqt1fexv7NipYoD0C8bXE2kLSniygMkE9BXecqt5dGhZTImJGASJbRGfHpozAcLB0Yj/SjwPW+poFga76aLFiW2J3S6G7Zwt+npAiRqdGfPXVqUtHvVcvpMU0f0g/MCeep5iCjy1HNL8=
+
+install:
+  - mkdir -p $(go env GOPATH)/src/github.com/hashicorp && cd $_
+  - git clone https://github.com/hashicorp/packer.git
+  - make dev
