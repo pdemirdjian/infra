@@ -8,6 +8,6 @@
         "image":"centos-7-x64",
         "region":"nyc3",
         "size":"512mb",
-        "ssh_username":"ubuntu"
+        "ssh_username":"root"
     }]
 }
