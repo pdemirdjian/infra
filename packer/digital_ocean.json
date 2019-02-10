@@ -1,0 +1,12 @@
+{
+    "variables": {
+        "DO_TOKEN": "{{env `DO_TOKEN`}}"
+    },
+    "builders": [{
+        "type":"digitalocean",
+        "api_token":"{{user `DO_TOKEN`}}",
+        "image":"centos-7-x64",
+        "region":"nyc3",
+        "size":"512mb"
+    }]
+}
