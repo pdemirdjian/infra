@@ -9,4 +9,5 @@ before_script:
   - sudo chmod +x /usr/local/bin/packer
 
 script:
-  - /usr/local/bin/packer ./packer/digital_ocean.json
+  - /usr/local/bin/packer validate ./packer/digital_ocean.json
+  - /usr/local/bin/packer build ./packer/digital_ocean.json
