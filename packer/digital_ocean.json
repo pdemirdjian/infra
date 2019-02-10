@@ -7,6 +7,7 @@
         "api_token":"{{user `DO_TOKEN`}}",
         "image":"centos-7-x64",
         "region":"nyc3",
-        "size":"512mb"
+        "size":"512mb",
+        "ssh_username":"ubuntu"
     }]
 }
