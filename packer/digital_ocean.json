@@ -22,7 +22,7 @@
             "inline": [
                 "cd /usr/local/src", 
                 "curl https://mirrors.edge.kernel.org/pub/software/scm/git/git-{{user `git_version`}}.tar.gz -o git-{{user `git_version`}}.tar.gz",
-                "tar -xzvf git-{{user `git_version`}}.tar.gz",
+                "tar -xzf git-{{user `git_version`}}.tar.gz",
                 "cd git-{{user `git_version`}}",
                 "make configure",
                 "./configure",
