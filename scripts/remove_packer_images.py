@@ -8,7 +8,6 @@ delete_snapshot_url = 'https://api.digitalocean.com/v2/snapshots/'
 headers = {'content-type': 'application/json','authorization': 'bearer {0}'.format(api_key)}
 r = requests.get(snapshots_api_url, headers=headers)
 snapshots = r.json()['snapshots']
-print(snapshots)
 
 for snapshot in snapshots:
     id = snapshot['id']
