@@ -15,7 +15,7 @@
     "provisioners": [
         {
             "type": "shell",
-            "inline": ["yum -y -q install gcc curl-devel expat-devel gettext-devel openssl-devel perl-devel zlib-devel"]
+            "inline": ["yum -y -q install autoconf gcc curl-devel expat-devel gettext-devel openssl-devel perl-devel zlib-devel"]
         },
         {
             "type": "shell",
