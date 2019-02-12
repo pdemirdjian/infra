@@ -1,6 +1,7 @@
 {
     "variables": {
-        "DO_TOKEN": "{{env `DO_TOKEN`}}"
+        "DO_TOKEN": "{{env `DO_TOKEN`}}",
+        "git_version": "2.20.1"
     },
     "builders": [{
         "type":"digitalocean",
@@ -20,9 +21,9 @@
             "type": "shell",
             "inline": [
                 "cd /usr/local/src", 
-                "wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.20.1.tar.gz",
-                "tar -xzvf git-2.20.1.tar.gz",
-                "cd git-2.20.1",
+                "curl https://mirrors.edge.kernel.org/pub/software/scm/git/git-{{user `git_version`}}.tar.gz -o git-{{user `git_version`}}.tar.gz",
+                "tar -xzvf {{user `git_version`}}.tar.gz",
+                "cd git-{{user `git_version`}}",
                 "make configure",
                 "./configure",
                 "make",
