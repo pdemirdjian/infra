@@ -53,6 +53,3 @@ workflows:
   delete-packer-then-new-image:
     jobs:
       - delete-packer
-    branches:
-      only:
-        - master
