@@ -47,9 +47,32 @@ jobs:
           command: |
             . venv/bin/activate
             python ./scripts/packer_removal/remove_packer_images.py
-
+  new-image:
+    environment:
+      PACKER_VERSION: '1.3.4'
+    machine: true
+    steps:
+      - checkout
+      - run:
+        name: install dependencies
+        command: |
+          curl -L https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip -o /tmp/packer.zip
+          sudo unzip -o -d /usr/local/bin /tmp/packer.zip
+          sudo chmod +x /usr/local/bin/packer
+      - run:
+        name: validate packer
+        command: /usr/local/bin/packer validate ./packer/digital_ocean.json
+      - run:
+        name: build packer
+        command: /usr/local/bin/packer build ./packer/digital_ocean.json
 workflows:
   version: 2
   delete-packer-then-new-image:
     jobs:
       - delete-packer
+      - new-image:
+          requires:
+            - delete-packer
+          filters:
+            branches:
+              only: master
