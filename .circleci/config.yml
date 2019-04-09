@@ -43,7 +43,7 @@ jobs:
       # https://pytest.org
       # https://nose.readthedocs.io
       - run:
-          name: run packer removale
+          name: run packer removal
           command: |
             . venv/bin/activate
             python ./scripts/packer_removal/remove_packer_images.py
@@ -53,9 +53,6 @@ workflows:
   delete-packer-then-new-image:
     jobs:
       - delete-packer
-      - create-new-image:
-          requires:
-            - delete-packer
     branches:
       only:
         - master
