@@ -59,12 +59,15 @@ jobs:
           curl -L https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip -o /tmp/packer.zip
           sudo unzip -o -d /usr/local/bin /tmp/packer.zip
           sudo chmod +x /usr/local/bin/packer
+
       - run:
         name: validate packer
         command: /usr/local/bin/packer validate ./packer/digital_ocean.json
+
       - run:
         name: build packer
         command: /usr/local/bin/packer build ./packer/digital_ocean.json
+
 workflows:
   version: 2
   delete-packer-then-new-image:
