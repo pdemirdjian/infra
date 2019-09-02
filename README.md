@@ -1,4 +1,4 @@
-# Pete's Infra [![Build Status](https://travis-ci.org/pdemirdjian/infra.svg?branch=master)](https://travis-ci.org/pdemirdjian/infra)
+# Pete's Infra [![Build Status](https://circleci.com/gh/pdemirdjian/infra.svg?style=svg)](https://circleci.com/gh/pdemirdjian/infra)
 
 # Purpose
 
