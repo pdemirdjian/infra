@@ -13,7 +13,7 @@ for snapshot in snapshots:
     id = snapshot['id']
     r = requests.delete("{0}{1}".format(delete_snapshot_url,id), headers=headers)
     if r.status_code != 204:
-        print("Could not delete snapshot: ${0}").format(id)
+        print("Could not delete snapshot: {0}".format(id))
         exit(1)
     else:
-        print("Deleted snapshot: ${0}").format(id)
+        print("Deleted snapshot: {0}".format(id))
