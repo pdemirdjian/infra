@@ -1,8 +1,8 @@
 {
     "variables": {
         "DO_TOKEN": "{{env `DO_TOKEN`}}",
-        "git_version": "2.21.0"
-    },
+        "git_version": "2.23.0"
+    }
     "builders": [{
         "type":"digitalocean",
         "api_token":"{{user `DO_TOKEN`}}",

@@ -49,7 +49,7 @@ jobs:
             python ./scripts/packer_removal/remove_packer_images.py
   new-image:
     environment:
-      PACKER_VERSION: '1.3.4'
+      PACKER_VERSION: '1.4.3'
     machine: true
     steps:
       - checkout
