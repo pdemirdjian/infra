@@ -1,6 +1,6 @@
 # hcp-terraform
 
-all the hcp-terraform configs
+all the hcp-terraform configs. This workspace is only applied by Pete :kissing_smiling_eyes:
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
