@@ -10,6 +10,6 @@ terraform {
 }
 
 provider "tfe" {
-    hostname = "app.terraform.io"
-    organization = local.organization
+  hostname     = "app.terraform.io"
+  organization = local.organization
 }
